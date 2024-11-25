@@ -1,0 +1,56 @@
+<div class="container mt-4">
+    <h3 class="mb-4 text-center">Ingreso de Información</h3>
+    <form [formGroup]="formIngreso" (ngSubmit)="buscarCliente()">
+        <!-- Tipo de Documento -->
+        <div class="row mb-3">
+            <div class="col-md-6 offset-md-3">
+                <label for="tipoDocumento" class="form-label">Tipo de documento</label>
+                <select
+                    id="tipoDocumento"
+                    class="form-select"
+                    formControlName="tipoDocumento"
+                >
+                    <option value="" disabled selected>Seleccione</option>
+                    <option value="C">Cédula de ciudadanía</option>
+                    <option value="P">Pasaporte</option>
+                </select>
+            </div>
+        </div>
+        <!-- Número de Documento -->
+        <div class="row mb-3">
+            <div class="col-md-6 offset-md-3">
+                <label for="numeroDocumento" class="form-label">Número de documento</label>
+                <input
+                    id="numeroDocumento"
+                    type="text"
+                    class="form-control"
+                    formControlName="numeroDocumento"
+                    (input)="formatNumeroDocumento()"
+                    placeholder="Ingrese su documento"
+                />
+            </div>
+        </div>
+        <!-- Botón Buscar -->
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <button
+                    type="submit"
+                    class="btn btn-primary w-100"
+                    [disabled]="formIngreso.invalid"
+                >
+                    Buscar
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Contenedor para mensajes de error -->
+    <div class="row mt-4" *ngIf="errorMessage">
+        <div class="col-md-6 offset-md-3">
+            <div class="alert alert-danger text-center" role="alert">
+                {{ errorMessage }}
+            </div>
+        </div>
+    </div>
+</div>
+    

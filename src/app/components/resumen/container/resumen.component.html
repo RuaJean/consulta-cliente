@@ -1,0 +1,51 @@
+<div class="container mt-4">
+    <h3 class="mb-4 text-center">Información básica</h3>
+    <div class="row">
+        <!-- Primer Apellido -->
+        <div class="col-md-6">
+            <label class="form-label">Primer apellido</label>
+            <input type="text" class="form-control" [value]="cliente.primerApellido" disabled />
+        </div>
+        <!-- Primer Nombre -->
+        <div class="col-md-6">
+            <label class="form-label">Primer nombre</label>
+            <input type="text" class="form-control" [value]="cliente.primerNombre" disabled />
+        </div>
+    </div>
+    <div class="row mt-3">
+        <!-- Segundo Apellido -->
+        <div class="col-md-6">
+            <label class="form-label">Segundo apellido</label>
+            <input type="text" class="form-control" [value]="cliente.segundoApellido" disabled />
+        </div>
+        <!-- Segundo Nombre -->
+        <div class="col-md-6">
+            <label class="form-label">Segundo nombre</label>
+            <input type="text" class="form-control" [value]="cliente.segundoNombre" disabled />
+        </div>
+    </div>
+    <div class="row mt-3">
+        <!-- Teléfono -->
+        <div class="col-md-6">
+            <label class="form-label">Teléfono</label>
+            <input type="text" class="form-control" [value]="cliente.telefono" disabled />
+        </div>
+        <!-- Dirección -->
+        <div class="col-md-6">
+            <label class="form-label">Dirección</label>
+            <input type="text" class="form-control" [value]="cliente.direccion" disabled />
+        </div>
+    </div>
+    <div class="row mt-3">
+        <!-- Ciudad de Residencia -->
+        <div class="col-md-12">
+            <label class="form-label">Ciudad de residencia</label>
+            <input type="text" class="form-control" [value]="cliente.ciudadResidencia" disabled />
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6 offset-md-3 text-center">
+            <button class="btn btn-secondary w-100" (click)="volver()">Volver</button>
+        </div>
+    </div>
+</div>
